@@ -177,12 +177,12 @@
       <div class="visitor-count" id="gcnt"></div>
     </footer>
   </main>
+  <script>
+    window.goatcounter = {
+      finish: function() { this.visit_count({append: 'gcnt'}); }
+    };
+  </script>
   <script data-goatcounter="https://thenrajan.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
-  <script>
-    window.addEventListener('load', function() {
-      if (window.goatcounter) window.goatcounter.visit_count({append: 'gcnt'});
-    });
-  </script>
 </body>
 </html>
