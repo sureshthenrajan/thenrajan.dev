@@ -129,16 +129,8 @@
     .links a:hover { color: var(--accent); }
 
     .visitor-count {
-      display: flex;
-      align-items: center;
-      gap: 8px;
       font-size: 0.8rem;
       color: var(--border);
-    }
-
-    .visitor-count img {
-      height: 18px;
-      border-radius: 3px;
     }
 
     @media (max-width: 480px) {
@@ -182,12 +174,15 @@
         <a href="https://github.com/sureshthenrajan" target="_blank" rel="noopener">GitHub</a>
         <a href="https://sessionize.com/suresh-thenrajan/" target="_blank" rel="noopener">Speaking</a>
       </nav>
-      <!-- visitor-badge counts page loads (not unique IPs). For unique visitors, replace with GoatCounter. -->
-      <div class="visitor-count">
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=sureshthenrajan.thenrajan.dev&left_color=334155&right_color=38bdf8&left_text=visitors"
-             alt="visitor count">
-      </div>
+      <div class="visitor-count" id="gcnt"></div>
     </footer>
   </main>
+  <script data-goatcounter="https://thenrajan.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      if (window.goatcounter) window.goatcounter.visit_count({append: 'gcnt'});
+    });
+  </script>
 </body>
 </html>
